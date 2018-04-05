@@ -1,0 +1,32 @@
+{
+	"_each": {
+		"prefix": "_each",
+		"body": "_.each(${1:list}, function (${2:element}, ${3:index}) {\n    ${4:// }\n});",
+		"description": "(Underscore) Iterates over a list of elements, yielding each in turn to an iteratee function.",
+		"scope": "source.js"
+	},
+	"_filter": {
+		"prefix": "_filter",
+		"body": "_.filter(${1:list}, function (${2:value}) {\n  ${3:// return …}\n}), ${4:context}",
+		"description": "(Underscore.js) Looks through each value in the list, returning an array of all the values that pass a truth test (predicate).",
+		"scope": "source.js"
+	},
+	"_findWhere": {
+		"prefix": "_findWhere",
+		"body": "_.findWhere(${1:list}, {${2:key}: ${3:value}});",
+		"description": "(Underscore.js) Looks through the list and returns the first value that matches all of the key-value pairs listed in properties.",
+		"scope": "source.js"
+	},
+	"_map": {
+		"prefix": "_map",
+		"body": "_.map(${1:list}, function (${2:value}, ${3:key}, ${1:list}) {\n    ${4:// return …}\n}, ${5:context});",
+		"description": "(Underscore.js) Produces a new array of values by mapping each value in list through a transformation function (iterator).",
+		"scope": "source.js"
+	},
+	"_size": {
+		"prefix": "_size",
+		"body": "_.size(${1:list});",
+		"description": "(Underscore.js) Return the number of values in the list.",
+		"scope": "source.js"
+	}
+}

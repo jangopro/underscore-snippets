@@ -1,0 +1,21 @@
+{
+    "name": "underscore-snippets",
+    "displayName": "Underscore Snippets",
+    "description": "Underscore Snippets for VS Code",
+    "version": "0.0.1",
+    "publisher": "jangopro",
+    "engines": {
+        "vscode": "^1.21.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "javascript",
+                "path": "./snippets/snippets.json"
+            }
+        ]
+    }
+}
