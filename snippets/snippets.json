@@ -1,14 +1,104 @@
 {
+	"_after": {
+		"prefix": "_after",
+		"body": "_.after(${1:count}, ${2:functionName})",
+		"description": "Creates a version of the function that will only be run after being called count times. ",
+		"scope": "source.js"
+	},
+	"_bind": {
+		"prefix": "_bind",
+		"body": "_.bind(${1:functionName}, ${2:object}, ${3:[*arguments]})",
+		"description": "Bind a function to an object, meaning that whenever the function is called, the value of this will be the object.",
+		"scope": "source.js"
+	},
+	"_bindAll": {
+		"prefix": "_bindAll",
+		"body": "_.bindAll(${1:object}, ${2:[*methodNames]})",
+		"description": "Binds a number of methods on the object, specified by methodNames, to be run in the context of that object whenever they are invoked.",
+		"scope": "source.js"
+	},
+	"_chain": {
+		"prefix": "_chain",
+		"body": "_.chain(${1:obj})",
+		"description": "Returns a wrapped object. Calling methods on this object will continue to return wrapped objects until value is called.",
+		"scope": "source.js"
+	},
+	"_clone": {
+		"prefix": "_clone",
+		"body": "_.clone(${1:object})",
+		"description": "Create a shallow-copied clone of the provided plain object.",
+		"scope": "source.js"
+	},
+	"_compact": {
+		"prefix": "_compact",
+		"body": "_.compact(${1:array})",
+		"description": "Returns a copy of the array with all falsy values removed.",
+		"scope": "source.js"
+	},
+	"_compose": {
+		"prefix": "_compose",
+		"body": "_.compose(${1:*functions})",
+		"description": "Returns the composition of a list of functions, where each function consumes the return value of the function that follows.",
+		"scope": "source.js"
+	},
 	"_contains": {
 		"prefix": "_contains",
 		"body": "_.contains(${1:list}, ${2:value}, ${3:fromIndex});",
 		"description": "(Underscore.js) Returns true if the value is present in the list. Uses indexOf internally, if list is an Array. ",
 		"scope": "source.js"
 	},
+	"_countBy": {
+		"prefix": "_countBy",
+		"body": "_.countBy(${1:list}, function(${2:element}) {\n  ${3:// return something}\n})",
+		"description": "Sorts a list into groups and returns a count for the number of objects in each group. ",
+		"scope": "source.js"
+	},
+	"_debounce": {
+		"prefix": "_debounce",
+		"body": "_.debounce(${1:functionName}, ${2:waitInMilliseconds})",
+		"description": "Creates and returns a new debounced version of the passed function which will postpone its execution until after wait milliseconds have elapsed since the last time it was invoked.",
+		"scope": "source.js"
+	},
+	"_defaults": {
+		"prefix": "_defaults",
+		"body": "_.defaults(${1:object}, ${2:*defaults})",
+		"description": "Fill in undefined properties in object with the first value present in the following list of defaults objects.",
+		"scope": "source.js"
+	},
+	"_defer": {
+		"prefix": "_defer",
+		"body": "_.defer(${1:functionName}, ${2:[*arguments]})",
+		"description": "Defers invoking the function until the current call stack has cleared, similar to using setTimeout with a delay of 0. ",
+		"scope": "source.js"
+	},
+	"_delay": {
+		"prefix": "_delay",
+		"body": "_.delay(${1:functionName}, ${2:waitInMilliseconds}${3:, [*arguments]})",
+		"description": "Much like setTimeout, invokes function after wait milliseconds.",
+		"scope": "source.js"
+	},
+	"_difference": {
+		"prefix": "_difference",
+		"body": "_.difference(${1:array}, ${2:*others})",
+		"description": "Similar to without, but returns the values from array that are not present in the other arrays.",
+		"scope": "source.js"
+	},
 	"_each": {
 		"prefix": "_each",
 		"body": "_.each(${1:list}, function (${2:element}, ${3:index}) {\n    ${4:// }\n});",
 		"description": "(Underscore) Iterates over a list of elements, yielding each in turn to an iteratee function.",
+		"scope": "source.js"
+	},
+	"_escape": {
+		"prefix": "_escape",
+		"body": "_.escape(${1:string})",
+		"description": "Escapes a string for insertion into HTML, replacing &, <, >, \", `, and ' characters.",
+		"scope": "source.js"
+	},
+	"_extend": {
+		"prefix": "_extend",
+		"body": "_.extend(${1:destination}, ${2:*sources})",
+		"description": "Shallowly copy all of the properties in the source objects over to the destination object, and return the destination object.",
 		"scope": "source.js"
 	},
 	"_filter": {
@@ -29,10 +119,70 @@
 		"description": "(Underscore.js) Looks through the list and returns the first value that matches all of the key-value pairs listed in properties.",
 		"scope": "source.js"
 	},
+	"_first": {
+		"prefix": "_first",
+		"body": "_.first(${1:array}, ${2:[n]})",
+		"description": "Returns the first element of an array.",
+		"scope": "source.js"
+	},
+	"_flatten": {
+		"prefix": "_flatten",
+		"body": "_.flatten(${1:array}, ${2:[shallow]})",
+		"description": "Flattens a nested array (the nesting can be to any depth). ",
+		"scope": "source.js"
+	},
+	"_functions": {
+		"prefix": "_functions",
+		"body": "_.functions(${1:object})",
+		"description": "Returns a sorted list of the names of every method in an object ",
+		"scope": "source.js"
+	},
+	"_groupBy": {
+		"prefix": "_groupBy",
+		"body": "_.groupBy(${1:list}, function(${2:value}) {\n  ${3:// return …}\n})",
+		"description": "Splits a collection into sets, grouped by the result of running each value through iteratee.",
+		"scope": "source.js"
+	},
+	"_has": {
+		"prefix": "_has",
+		"body": "_.has(${1:object}, ${2:value})",
+		"description": "Does the object contain the given key?",
+		"scope": "source.js"
+	},
+	"_identity": {
+		"prefix": "_identity",
+		"body": "_.identity(${1:value})",
+		"description": "Returns the same value that is used as the argument. ",
+		"scope": "source.js"
+	},
 	"_indexOf": {
 		"prefix": "_indexOf",
 		"body": "_.indexOf(${1:array}, ${2:value}${3:, [isSorted]})",
 		"description": "(Underscore.js) Returns the index at which value can be found in the array, or -1 if value is not present in the array. ",
+		"scope": "source.js"
+	},
+	"_initial": {
+		"prefix": "_initial",
+		"body": "_.initial(${1:array}, ${2:[n]})",
+		"description": "Returns everything but the last entry of the array. Pass n to exclude the last n elements from the result.",
+		"scope": "source.js"
+	},
+	"_intersection": {
+		"prefix": "_intersection",
+		"body": "_.intersection(${1:*arrays})",
+		"description": "Computes the list of values that are the intersection of all the arrays.",
+		"scope": "source.js"
+	},
+	"_invert": {
+		"prefix": "_invert",
+		"body": "_.invert(${1:object})",
+		"description": "Returns a copy of the object where the keys have become the values and the values the keys",
+		"scope": "source.js"
+	},
+	"_invoke": {
+		"prefix": "_invoke",
+		"body": "_.invoke(${1:list}, ${2:methodName}${3:, [*arguments]})",
+		"description": "Calls the method named by methodName on each value in the list.",
 		"scope": "source.js"
 	},
 	"_isArguments": {
@@ -103,38 +253,128 @@
 	},
 	"_isNumber": {
 		"prefix": "_isNumber",
-		"body": "_(${1:object}).isNumber()",
-		"description": "Underscore _.isNumber()",
+		"body": "_.isNumber(${1:object})",
+		"description": "Returns true if object is a Number (including NaN).",
 		"scope": "source.js"
 	},
 	"_isObject": {
 		"prefix": "_isObject",
-		"body": "_(${1:value}).isObject()",
-		"description": "Underscore _.isObject()",
+		"body": "_.isObject(${1:value})",
+		"description": "Returns true if value is an Object. Note that JavaScript arrays and functions are objects, while (normal) strings and numbers are not.",
 		"scope": "source.js"
 	},
 	"_isRegExp": {
 		"prefix": "_isRegExp",
-		"body": "_(${1:object}).isRegExp()",
-		"description": "Underscore _.isRegExp()",
+		"body": "_.isRegExp(${1:object})",
+		"description": "Returns true if object is a RegExp.",
 		"scope": "source.js"
 	},
 	"_isString": {
 		"prefix": "_isString",
-		"body": "_(${1:object}).isString()",
-		"description": "Underscore _.isString()",
+		"body": "_.isString(${1:object})",
+		"description": "Returns true if object is a String.",
 		"scope": "source.js"
 	},
 	"_isUndefined": {
 		"prefix": "_isUndefined",
-		"body": "_(${1:value}).isUndefined()",
-		"description": "Underscore _.isUndefined()",
+		"body": "_.isUndefined(${1:value})",
+		"description": "Returns true if value is undefined.",
+		"scope": "source.js"
+	},
+	"_keys": {
+		"prefix": "_keys",
+		"body": "_.keys(${1:object})",
+		"description": "Retrieve all the names of the object's own enumerable properties.",
+		"scope": "source.js"
+	},
+	"_last": {
+		"prefix": "_last",
+		"body": "_.last(${1:array}, ${2:[n]})",
+		"description": "Returns the last element of an array. ",
+		"scope": "source.js"
+	},
+	"_lastIndexOf": {
+		"prefix": "_lastIndexOf",
+		"body": "_.lastIndexOf(${1:array}, ${2:value}${3:, [fromIndex]})",
+		"description": "Returns the index of the last occurrence of value in the array, or -1 if value is not present.",
 		"scope": "source.js"
 	},
 	"_map": {
 		"prefix": "_map",
 		"body": "_.map(${1:list}, function (${2:value}, ${3:key}, ${1:list}) {\n    ${4:// return …}\n}, ${5:context});",
 		"description": "(Underscore.js) Produces a new array of values by mapping each value in list through a transformation function (iterator).",
+		"scope": "source.js"
+	},
+	"_max": {
+		"prefix": "_max",
+		"body": "_.max(${1:list}, function (${2:value}) {\n  ${3:// return …}\n})",
+		"description": "Returns the maximum value in list.",
+		"scope": "source.js"
+	},
+	"_memoize": {
+		"prefix": "_memoize",
+		"body": "_.memoize(${1:functionName}, ${2:[hashFunction]})",
+		"description": "Memoizes a given function by caching the computed result.",
+		"scope": "source.js"
+	},
+	"_min": {
+		"prefix": "_min",
+		"body": "_.min(${1:list}, function (${2:value}) {\n  ${3:// return …}\n})",
+		"description": "Returns the minimum value in list. ",
+		"scope": "source.js"
+	},
+	"_mixin": {
+		"prefix": "_mixin",
+		"body": "_.mixin(${1:object})",
+		"description": "Allows you to extend Underscore with your own utility functions.",
+		"scope": "source.js"
+	},
+	"_noConflict": {
+		"prefix": "_noConflict",
+		"body": "_.noConflict()",
+		"description": "Give control of the _ variable back to its previous owner.",
+		"scope": "source.js"
+	},
+	"_object": {
+		"prefix": "_object",
+		"body": "_.object(${1:list}, ${2:[values]})",
+		"description": "Converts arrays into objects.",
+		"scope": "source.js"
+	},
+	"_omit": {
+		"prefix": "_omit",
+		"body": "_.omit(${1:object}, ${2:*keys})",
+		"description": "Return a copy of the object, filtered to omit the blacklisted keys (or array of keys). ",
+		"scope": "source.js"
+	},
+	"_once": {
+		"prefix": "_once",
+		"body": "_.once(${1:functionName})",
+		"description": "Creates a version of the function that can only be called one time. ",
+		"scope": "source.js"
+	},
+	"_pairs": {
+		"prefix": "_pairs",
+		"body": "_.pairs(${1:object})",
+		"description": "Convert an object into a list of [key, value] pairs.",
+		"scope": "source.js"
+	},
+	"_partial": {
+		"prefix": "_partial",
+		"body": "_.partial(${1:functionName}, ${2:[*arguments]})",
+		"description": "Partially apply a function by filling in any number of its arguments, without changing its dynamic this value.",
+		"scope": "source.js"
+	},
+	"_pick": {
+		"prefix": "_pick",
+		"body": "_.pick(${1:object}, ${2:*keys})",
+		"description": "Return a copy of the object, filtered to only have values for the whitelisted keys (or array of valid keys).",
+		"scope": "source.js"
+	},
+	"_pluck": {
+		"prefix": "_pluck",
+		"body": "_.pluck(${1:list}, ${2:propertyName})",
+		"description": "A convenient version of what is perhaps the most common use-case for map: extracting a list of property values.",
 		"scope": "source.js"
 	},
 	"_size": {
