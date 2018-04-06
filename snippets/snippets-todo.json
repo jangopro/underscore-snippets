@@ -53,12 +53,7 @@
 		"description": "Underscore _.compose()",
 		"scope": "source.js"
 	},
-	"_contains": {
-		"prefix": "_contains",
-		"body": "_(${1:list}).contains(${2:value})",
-		"description": "Underscore _.contains()",
-		"scope": "source.js"
-	},
+	
 	"_countBy": {
 		"prefix": "_countBy",
 		"body": "_(${1:list}).countBy( function(${2:element}) {\n  ${3:// return something}\n})",
@@ -107,12 +102,6 @@
 		"description": "Underscore _.extend()",
 		"scope": "source.js"
 	},
-	"_find": {
-		"prefix": "_find",
-		"body": "_(${1:list}).find( function(${2:value}) {\n  ${3:// return …}\n})",
-		"description": "Underscore _.find()",
-		"scope": "source.js"
-	},
 	"_first": {
 		"prefix": "_first",
 		"body": "_(${1:array}).first(${2:[n]})",
@@ -149,12 +138,7 @@
 		"description": "Underscore _.identity()",
 		"scope": "source.js"
 	},
-	"_indexOf": {
-		"prefix": "_indexOf",
-		"body": "_(${1:array}).indexOf(${2:value}${3:, [isSorted]})",
-		"description": "Underscore _.indexOf()",
-		"scope": "source.js"
-	},
+	
 	"_initial": {
 		"prefix": "_initial",
 		"body": "_(${1:array}).initial(${2:[n]})",
@@ -179,102 +163,7 @@
 		"description": "Underscore _.invoke()",
 		"scope": "source.js"
 	},
-	"_isArguments": {
-		"prefix": "_isArguments",
-		"body": "_(${1:object}).isArguments()",
-		"description": "Underscore _.isArguments()",
-		"scope": "source.js"
-	},
-	"_isArray": {
-		"prefix": "_isArray",
-		"body": "_(${1:object}).isArray()",
-		"description": "Underscore _.isArray()",
-		"scope": "source.js"
-	},
-	"_isBoolean": {
-		"prefix": "_isBoolean",
-		"body": "_(${1:object}).isBoolean()",
-		"description": "Underscore _.isBoolean()",
-		"scope": "source.js"
-	},
-	"_isDate": {
-		"prefix": "_isDate",
-		"body": "_(${1:object}).isDate()",
-		"description": "Underscore _.isDate()",
-		"scope": "source.js"
-	},
-	"_isElement": {
-		"prefix": "_isElement",
-		"body": "_(${1:object}).isElement()",
-		"description": "Underscore _.isElement()",
-		"scope": "source.js"
-	},
-	"_isEmpty": {
-		"prefix": "_isEmpty",
-		"body": "_(${1:object}).isEmpty()",
-		"description": "Underscore _.isEmpty()",
-		"scope": "source.js"
-	},
-	"_isEqual": {
-		"prefix": "_isEqual",
-		"body": "_(${1:object}).isEqual(${2:other})",
-		"description": "Underscore _.isEqual()",
-		"scope": "source.js"
-	},
-	"_isFinite": {
-		"prefix": "_isFinite",
-		"body": "_(${1:object}).isFinite()",
-		"description": "Underscore _.isFinite()",
-		"scope": "source.js"
-	},
-	"_isFunction": {
-		"prefix": "_isFunction",
-		"body": "_(${1:object}).isFunction()",
-		"description": "Underscore _.isFunction()",
-		"scope": "source.js"
-	},
-	"_isNaN": {
-		"prefix": "_isNaN",
-		"body": "_(${1:object}).isNaN()",
-		"description": "Underscore _.isNaN()",
-		"scope": "source.js"
-	},
-	"_isNull": {
-		"prefix": "_isNull",
-		"body": "_(${1:object}).isNull()",
-		"description": "Underscore _.isNull()",
-		"scope": "source.js"
-	},
-	"_isNumber": {
-		"prefix": "_isNumber",
-		"body": "_(${1:object}).isNumber()",
-		"description": "Underscore _.isNumber()",
-		"scope": "source.js"
-	},
-	"_isObject": {
-		"prefix": "_isObject",
-		"body": "_(${1:value}).isObject()",
-		"description": "Underscore _.isObject()",
-		"scope": "source.js"
-	},
-	"_isRegExp": {
-		"prefix": "_isRegExp",
-		"body": "_(${1:object}).isRegExp()",
-		"description": "Underscore _.isRegExp()",
-		"scope": "source.js"
-	},
-	"_isString": {
-		"prefix": "_isString",
-		"body": "_(${1:object}).isString()",
-		"description": "Underscore _.isString()",
-		"scope": "source.js"
-	},
-	"_isUndefined": {
-		"prefix": "_isUndefined",
-		"body": "_(${1:value}).isUndefined()",
-		"description": "Underscore _.isUndefined()",
-		"scope": "source.js"
-	},
+	
 	"_keys": {
 		"prefix": "_keys",
 		"body": "_(${1:object}).keys()",
