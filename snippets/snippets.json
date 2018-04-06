@@ -5,6 +5,18 @@
 		"description": "Creates a version of the function that will only be run after being called count times. ",
 		"scope": "source.js"
 	},
+	"_all": {
+		"prefix": "_all",
+		"body": "_.all(${1:list}, ${2:functionName})",
+		"description": "(Replace by _.every since > 1.4.0) Returns true if all of the values in the list pass the iterator truth test. ",
+		"scope": "source.js"
+	},
+	"_any": {
+		"prefix": "_any",
+		"body": "_.any(${1:list}, ${2:[iterator]})",
+		"description": "(Replaced by _.some since > 1.4.0) Returns true if any of the values in the list pass the iterator truth test.",
+		"scope": "source.js"
+	},
 	"_bind": {
 		"prefix": "_bind",
 		"body": "_.bind(${1:functionName}, ${2:object}, ${3:[*arguments]})",
@@ -377,10 +389,154 @@
 		"description": "A convenient version of what is perhaps the most common use-case for map: extracting a list of property values.",
 		"scope": "source.js"
 	},
+	"_random": {
+		"prefix": "_random",
+		"body": "_.random(${1:min}, ${2:max})",
+		"description": "Returns a random integer between min and max, inclusive. If you only pass one argument, it will return a number between 0 and that number.",
+		"scope": "source.js"
+	},
+	"_range": {
+		"prefix": "_range",
+		"body": "_.range(${1:[start], }${2:stop}${3:, [step]})",
+		"description": "Returns a list of integers from start (inclusive) to stop (exclusive), incremented (or decremented) by step, exclusive.",
+		"scope": "source.js"
+	},
+	"_reduce": {
+		"prefix": "_reduce",
+		"body": "_.reduce(${1:list}, function (${2:memo}, ${3:value}, ${4:key}, ${1:list} ) {\n  ${6:// return …}\n}, ${5:memo} )",
+		"description": "Also known as inject and foldl, reduce boils down a list of values into a single value.",
+		"scope": "source.js"
+	},
+	"_reduceRight": {
+		"prefix": "_reduceRight",
+		"body": "_.reduceRight(${1:list}, function(${2:memo}, ${3:value}, ${4:key}, ${1:list} ) {\n  ${6:// return …}\n}, ${5:memo} )",
+		"description": "The right-associative version of reduce.",
+		"scope": "source.js"
+	},
+	"_reject": {
+		"prefix": "_reject",
+		"body": "_.reject(${1:list}, function(${2:value}) {\n  ${3:// return …}\n})",
+		"description": "Returns the values in list without the elements that the truth test (predicate) passes.",
+		"scope": "source.js"
+	},
+	"_rest": {
+		"prefix": "_rest",
+		"body": "_.rest(${1:array}, ${2:[index]})",
+		"description": "Returns the rest of the elements in an array. Pass an index to return the values of the array from that index onward.",
+		"scope": "source.js"
+	},
+	"_result": {
+		"prefix": "_result",
+		"body": "_.result(${1:object}, ${2:property})",
+		"description": "If the value of the named property is a function then invoke it with the object as context; otherwise, return it.",
+		"scope": "source.js"
+	},
+	"_shuffle": {
+		"prefix": "_shuffle",
+		"body": "_.shuffle(${1:list})",
+		"description": "Returns a shuffled copy of the list, using a version of the Fisher-Yates shuffle.",
+		"scope": "source.js"
+	},
 	"_size": {
 		"prefix": "_size",
 		"body": "_.size(${1:list});",
 		"description": "(Underscore.js) Return the number of values in the list.",
+		"scope": "source.js"
+	},
+	"_sortBy": {
+		"prefix": "_sortBy",
+		"body": "_.sortBy(${1:list}, function(${2:value}) {\n  ${3:// return …}\n})",
+		"description": "Returns a (stably) sorted copy of list, ranked in ascending order by the results of running each value through iteratee",
+		"scope": "source.js"
+	},
+	"_sortedIndex": {
+		"prefix": "_sortedIndex",
+		"body": "_.sortedIndex(${1:list}, ${2:value}), ${3:[iteratee]}",
+		"description": "Uses a binary search to determine the index at which the value should be inserted into the list in order to maintain the list's sorted order.",
+		"scope": "source.js"
+	},
+	"_tap": {
+		"prefix": "_tap",
+		"body": "_.tap(${1:object}, ${2:functionName})",
+		"description": "Invokes interceptor with the object, and then returns object.",
+		"scope": "source.js"
+	},
+	"_template": {
+		"prefix": "_template",
+		"body": "_.template(${1:templateString}${3:, [settings]})",
+		"description": "Compiles JavaScript templates into functions that can be evaluated for rendering.",
+		"scope": "source.js"
+	},
+	"_throttle": {
+		"prefix": "_throttle",
+		"body": "_.throttle(${1:functionName}, ${2:waitInMilliseconds})",
+		"description": "Creates and returns a new, throttled version of the passed function, that, when invoked repeatedly, will only actually call the original function at most once per every wait milliseconds.",
+		"scope": "source.js"
+	},
+	"_times": {
+		"prefix": "_times",
+		"body": "_.times(${1:n}, function(${2:value}) {\n  ${3:}\n})",
+		"description": "Invokes the given iteratee function n times.",
+		"scope": "source.js"
+	},
+	"_toArray": {
+		"prefix": "_toArray",
+		"body": "_.toArray(${1:list})",
+		"description": "Creates a real Array from the list (anything that can be iterated over). ",
+		"scope": "source.js"
+	},
+	"_union": {
+		"prefix": "_union",
+		"body": "_.union(${1:*arrays})",
+		"description": "Computes the union of the passed-in arrays: the list of unique items, in order, that are present in one or more of the arrays.",
+		"scope": "source.js"
+	},
+	"_uniq": {
+		"prefix": "_uniq",
+		"body": "_.uniq(${1:array}, ${2:[isSorted]}${2:, [iterator]})",
+		"description": "roduces a duplicate-free version of the array, using === to test object equality.",
+		"scope": "source.js"
+	},
+	"_uniqueId": {
+		"prefix": "_uniqueId",
+		"body": "_.uniqueId(${1:[prefix]})",
+		"description": "Generate a globally-unique id for client-side models or DOM elements that need one. ",
+		"scope": "source.js"
+	},
+	"_value": {
+		"prefix": "_value",
+		"body": "_.value(${1:obj})",
+		"description": "Extracts the value of a wrapped object.",
+		"scope": "source.js"
+	},
+	"_values": {
+		"prefix": "_values",
+		"body": "_.values(${1:object})",
+		"description": "Return all of the values of the object's own properties.",
+		"scope": "source.js"
+	},
+	"_where": {
+		"prefix": "_where",
+		"body": "_.where(${1:list}, ${2:properties})",
+		"description": "Looks through each value in the list, returning an array of all the values that contain all of the key-value pairs listed in properties.",
+		"scope": "source.js"
+	},
+	"_without": {
+		"prefix": "_without",
+		"body": "_.without(${1:array}, ${2:[*values]})",
+		"description": "Returns a copy of the array with all instances of the values removed.",
+		"scope": "source.js"
+	},
+	"_wrap": {
+		"prefix": "_wrap",
+		"body": "_.wrap(${1:functionName}, function(${2:func}) {\n  ${3:}\n})",
+		"description": "Wraps the first function inside of the wrapper function, passing it as the first argument. ",
+		"scope": "source.js"
+	},
+	"_zip": {
+		"prefix": "_zip",
+		"body": "_.zip(${1:*arrays})",
+		"description": "Merges together the values of each of the arrays with the values at the corresponding position.",
 		"scope": "source.js"
 	}
 }
