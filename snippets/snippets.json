@@ -11,10 +11,22 @@
 		"description": "(Replace by _.every since > 1.4.0) Returns true if all of the values in the list pass the iterator truth test. ",
 		"scope": "source.js"
 	},
+	"_allKeys": {
+		"prefix": "_allKeys",
+		"body": "_.allKeys(${1:object})",
+		"description": "Retrieve all the names of object's own and inherited properties.",
+		"scope": "source.js"
+	},
 	"_any": {
 		"prefix": "_any",
 		"body": "_.any(${1:list}, ${2:[iterator]})",
 		"description": "(Replaced by _.some since > 1.4.0) Returns true if any of the values in the list pass the iterator truth test.",
+		"scope": "source.js"
+	},
+	"_before": {
+		"prefix": "_before",
+		"body": "_.before(${1:count}, ${2:functionName})",
+		"description": "Creates a version of the function that can be called no more than count times. The result of the last function call is memoized and returned when count has been reached.",
 		"scope": "source.js"
 	},
 	"_bind": {
@@ -51,6 +63,12 @@
 		"prefix": "_compose",
 		"body": "_.compose(${1:*functions})",
 		"description": "Returns the composition of a list of functions, where each function consumes the return value of the function that follows.",
+		"scope": "source.js"
+	},
+	"_constant": {
+		"prefix": "_constant",
+		"body": "_.constant(${1:value})",
+		"description": "Creates a function that returns the same value that is used as the argument of",
 		"scope": "source.js"
 	},
 	"_contains": {
@@ -107,10 +125,22 @@
 		"description": "Escapes a string for insertion into HTML, replacing &, <, >, \", `, and ' characters.",
 		"scope": "source.js"
 	},
+	"_every": {
+		"prefix": "_every",
+		"body": "_.every(${1:list})",
+		"description": "Returns true if all of the values in the list pass the predicate truth test. Short-circuits and stops traversing the list if a false element is found. predicate is transformed through iteratee to facilitate shorthand syntaxes.",
+		"scope": "source.js"
+	},
 	"_extend": {
 		"prefix": "_extend",
 		"body": "_.extend(${1:destination}, ${2:*sources})",
 		"description": "Shallowly copy all of the properties in the source objects over to the destination object, and return the destination object.",
+		"scope": "source.js"
+	},
+	"_extendOwn": {
+		"prefix": "_extendOwn",
+		"body": "_.extendOwn(${1:destination}, ${2:*sources})",
+		"description": "Like extend, but only copies own properties over to the destination object.",
 		"scope": "source.js"
 	},
 	"_filter": {
@@ -239,6 +269,12 @@
 		"description": "Performs an optimized deep comparison between the two objects, to determine if they should be considered equal.",
 		"scope": "source.js"
 	},
+	"_isError": {
+		"prefix": "_isError",
+		"body": "_.isError(${1:object})",
+		"description": "Returns true if object inherits from an Error.",
+		"scope": "source.js"
+	},
 	"_isFinite": {
 		"prefix": "_isFinite",
 		"body": "_.isFinite(${1:object})",
@@ -249,6 +285,12 @@
 		"prefix": "_isFunction",
 		"body": "_.isFunction(${1:object})",
 		"description": "Returns true if object is a Function.",
+		"scope": "source.js"
+	},
+	"_isMatch": {
+		"prefix": "_isMatch",
+		"body": "_.isMatch(${1:object}, {${2:properties}})",
+		"description": "Tells you if the keys and values in properties are contained in object.",
 		"scope": "source.js"
 	},
 	"_isNaN": {
@@ -317,6 +359,12 @@
 		"description": "(Underscore.js) Produces a new array of values by mapping each value in list through a transformation function (iterator).",
 		"scope": "source.js"
 	},
+	"_matcher": {
+		"prefix": "_matcher",
+		"body": "_.matcher({${1:attrs}})",
+		"description": "Returns a predicate function that will tell you if a passed in object contains all of the key/value properties present in attrs.",
+		"scope": "source.js"
+	},
 	"_max": {
 		"prefix": "_max",
 		"body": "_.max(${1:list}, function (${2:value}) {\n  ${3:// return …}\n})",
@@ -345,6 +393,18 @@
 		"prefix": "_noConflict",
 		"body": "_.noConflict()",
 		"description": "Give control of the _ variable back to its previous owner.",
+		"scope": "source.js"
+	},
+	"_noop": {
+		"prefix": "_noop",
+		"body": "_.noop()",
+		"description": "Returns undefined irrespective of the arguments passed to it. Useful as the default for optional callback arguments.",
+		"scope": "source.js"
+	},
+	"_now": {
+		"prefix": "_now",
+		"body": "_.now()",
+		"description": "Returns an integer timestamp for the current time, using the fastest method available in the runtime. Useful for implementing timing/animation functions.",
 		"scope": "source.js"
 	},
 	"_object": {
@@ -387,6 +447,18 @@
 		"prefix": "_pluck",
 		"body": "_.pluck(${1:list}, ${2:propertyName})",
 		"description": "A convenient version of what is perhaps the most common use-case for map: extracting a list of property values.",
+		"scope": "source.js"
+	},
+	"_property": {
+		"prefix": "_property",
+		"body": "_.property(${1:path})",
+		"description": "Returns a function that will return the specified property of any passed-in object. path may be specified as a simple key, or as an array of object keys or array indexes, for deep property fetching.",
+		"scope": "source.js"
+	},
+	"_propertyOf": {
+		"prefix": "_propertyOf",
+		"body": "_.propertyOf(${1:object})",
+		"description": "Inverse of _.property. Takes an object and returns a function which will return the value of a provided property.",
 		"scope": "source.js"
 	},
 	"_random": {
@@ -485,6 +557,12 @@
 		"description": "Creates a real Array from the list (anything that can be iterated over). ",
 		"scope": "source.js"
 	},
+	"_unescape": {
+		"prefix": "_unescape",
+		"body": "_.unescape(${1:string})",
+		"description": "The opposite of escape, replaces &amp;, &lt;, &gt;, &quot;, &#96; and &#x27; with their unescaped counterparts.",
+		"scope": "source.js"
+	},
 	"_union": {
 		"prefix": "_union",
 		"body": "_.union(${1:*arrays})",
@@ -501,6 +579,12 @@
 		"prefix": "_uniqueId",
 		"body": "_.uniqueId(${1:[prefix]})",
 		"description": "Generate a globally-unique id for client-side models or DOM elements that need one. ",
+		"scope": "source.js"
+	},
+	"_unzip": {
+		"prefix": "_unzip",
+		"body": "_.unzip(${1:*arrays})",
+		"description": "The opposite of zip. Given an array of arrays, returns a series of new arrays, the first of which contains all of the first elements in the input arrays, the second of which contains all of the second elements, and so on.",
 		"scope": "source.js"
 	},
 	"_value": {

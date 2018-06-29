@@ -4,7 +4,7 @@ Underscorse snippets extension for VS Code
 
 ## Features
 
-Every snippets starts with an underscore, start typing with a _ to see the list of snippets available.
+Every snippets starts with an underscore, start typing with _ to see the list of snippets available.
 
 Ex: _contains
 
