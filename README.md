@@ -1,6 +1,6 @@
 # underscore-snippets README
 
-Underscorse snippets extension for VS Code
+Underscore snippets extension for VS Code
 
 ## Features
 
@@ -12,13 +12,12 @@ Only works in .js files
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
-
 ### 1.0.0
 
 Initial release of underscore-snippets
 
-#1.1.0
+### 1.1.0
 
-Added: before, allKeys, constant, every, extendOwn, isError, isMatch, matcher, noop, now, property, propertyOf, unescape and unzip snippets
+- Added: before, allKeys, constant, every, extendOwn, isError, isMatch, matcher, noop, now, property, propertyOf, unescape and unzip snippets
+- Added extension icon
 
