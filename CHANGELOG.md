@@ -3,5 +3,9 @@ All notable changes to the "underscore-snippets" extension will be documented in
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
-## [Unreleased]
-- Initial release
+## 1.0.0
+- Initial release 
+
+#1.1.0
+
+- Added: before, allKeys, constant, every, extendOwn, isError, isMatch, matcher, noop, now, property, propertyOf, unescape and unzip snippets

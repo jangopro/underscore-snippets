@@ -4,6 +4,7 @@
     "description": "Underscore Snippets for VS Code",
     "version": "1.0.0",
     "publisher": "jangopro",
+    "icon": "icons/icon-underscore-snippets.png",
     "engines": {
         "vscode": "^1.21.0"
     },
