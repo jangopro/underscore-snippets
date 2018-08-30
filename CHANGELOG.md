@@ -8,3 +8,9 @@ All notable changes to the "underscore-snippets" extension will be documented in
 
 - Added: before, allKeys, constant, every, extendOwn, isError, isMatch, matcher, noop, now, property, propertyOf, unescape and unzip snippets
 - Added extension icon
+
+
+### 1.2.0
+- Added: create, sample, some, findIndex, findLastIndex, indexBy, iteratee, mapObject, partition snippets
+- Added missing argument to _.every snippet
+- Rename extension to UnderscoreJS snippets

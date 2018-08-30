@@ -1,6 +1,6 @@
 # underscore-snippets README
 
-Underscore snippets extension for VS Code
+UnderscoreJS snippets extension for VS Code
 
 ## Features
 
@@ -21,3 +21,7 @@ Initial release of underscore-snippets
 - Added: before, allKeys, constant, every, extendOwn, isError, isMatch, matcher, noop, now, property, propertyOf, unescape and unzip snippets
 - Added extension icon
 
+### 1.2.0
+- Added: create, sample, some, findIndex, findLastIndex, indexBy, iteratee, mapObject, negate, partition snippets
+- Added missing argument to _.every snippet
+- Rename extension to UnderscoreJS snippets
