@@ -83,6 +83,12 @@
 		"description": "Sorts a list into groups and returns a count for the number of objects in each group. ",
 		"scope": "source.js"
 	},
+	"_create": {
+		"prefix": "_create",
+		"body": "_.create(${1:Object}.prototype, {${2:props}})",
+		"description": "(> 1.8.3) Creates a new object with the given prototype, optionally attaching props as own properties. Basically, Object.create, but without all of the property descriptor jazz.",
+		"scope": "source.js"
+	},
 	"_debounce": {
 		"prefix": "_debounce",
 		"body": "_.debounce(${1:functionName}, ${2:waitInMilliseconds})",
@@ -127,7 +133,7 @@
 	},
 	"_every": {
 		"prefix": "_every",
-		"body": "_.every(${1:list})",
+		"body": "_.every(${1:list}, function (${2:value}) {\n  ${3:// return …}\n}, ${4:context})",
 		"description": "Returns true if all of the values in the list pass the predicate truth test. Short-circuits and stops traversing the list if a false element is found. predicate is transformed through iteratee to facilitate shorthand syntaxes.",
 		"scope": "source.js"
 	},
@@ -145,7 +151,7 @@
 	},
 	"_filter": {
 		"prefix": "_filter",
-		"body": "_.filter(${1:list}, function (${2:value}) {\n  ${3:// return …}\n}), ${4:context}",
+		"body": "_.filter(${1:list}, function (${2:value}) {\n  ${3:// return …}\n}, ${4:context})",
 		"description": "(Underscore.js) Looks through each value in the list, returning an array of all the values that pass a truth test (predicate).",
 		"scope": "source.js"
 	},
@@ -153,6 +159,24 @@
 		"prefix": "_find",
 		"body": "_.find(${1:list}, function (${2:value}) {\n  ${3://   return …}\n});",
 		"description": "(Underscore.js) Looks through each value in the list, returning the first one that passes a truth test (predicate), or undefined if no value passes the test.",
+		"scope": "source.js"
+	},
+	"_findIndex": {
+		"prefix": "_findIndex",
+		"body": "_.findIndex(${1:array}, function (${2:value}) {\n  ${3:    return …}\n});",
+		"description": "(Underscore.js > 1.8) Similar to _.indexOf, returns the first index where the predicate truth test passes; otherwise returns -1.",
+		"scope": "source.js"
+	},
+	"_findLastIndex": {
+		"prefix": "_findLastIndex",
+		"body": "_.findLastIndex(${1:array}, function (${2:value}) {\n  ${3:    return …}\n});",
+		"description": "(Underscore.js > 1.8) Like _.findIndex but iterates the array in reverse, returning the index closest to the end where the predicate truth test passes.",
+		"scope": "source.js"
+	},
+	"_findKey": {
+		"prefix": "_findKey",
+		"body": "_.findKey(${1:array}, function (${2:value}, ${3:key}) {\n  ${4:    return …}\n});",
+		"description": "(Underscore.js > 1.8) Similar to _.findIndex but for keys in objects. Returns the key where the predicate truth test passes or undefined. predicate is transformed through iteratee to facilitate shorthand syntaxes.",
 		"scope": "source.js"
 	},
 	"_findWhere": {
@@ -195,6 +219,12 @@
 		"prefix": "_identity",
 		"body": "_.identity(${1:value})",
 		"description": "Returns the same value that is used as the argument. ",
+		"scope": "source.js"
+	},
+	"_indexBy": {
+		"prefix": "_indexBy",
+		"body": "_.indexBy(${1:list}, function (${2:value}) {\n  ${3:// return …}\n})",
+		"description": "(Underscore.js >1.5.2) Given a list, and an iteratee function that returns a key for each element in the list (or a property name), returns an object with an index of each item. Just like groupBy, but for when you know your keys are unique.",
 		"scope": "source.js"
 	},
 	"_indexOf": {
@@ -335,6 +365,12 @@
 		"description": "Returns true if value is undefined.",
 		"scope": "source.js"
 	},
+	"_iteratee": {
+		"prefix": "_iteratee",
+		"body": "_.iteratee(${1:value})",
+		"description": "(> 1.7) Generates a callback that can be applied to each element in a collection. _.iteratee supports a number of shorthand syntaxes for common callback use cases.",
+		"scope": "source.js"
+	},
 	"_keys": {
 		"prefix": "_keys",
 		"body": "_.keys(${1:object})",
@@ -357,6 +393,12 @@
 		"prefix": "_map",
 		"body": "_.map(${1:list}, function (${2:value}, ${3:key}, ${1:list}) {\n    ${4:// return …}\n}, ${5:context});",
 		"description": "(Underscore.js) Produces a new array of values by mapping each value in list through a transformation function (iterator).",
+		"scope": "source.js"
+	},
+	"_mapObject": {
+		"prefix": "_mapObject",
+		"body": "_.mapObject(${1:object}, function (${2:value}, ${3:key}) {\n  ${4:    return }\n})",
+		"description": "(> 1.8) Like map, but for objects. Transform the value of each property in turn.",
 		"scope": "source.js"
 	},
 	"_matcher": {
@@ -387,6 +429,12 @@
 		"prefix": "_mixin",
 		"body": "_.mixin(${1:object})",
 		"description": "Allows you to extend Underscore with your own utility functions.",
+		"scope": "source.js"
+	},
+	"_negate": {
+		"prefix": "_negate",
+		"body": "_.negate(${1:functionName})",
+		"description": "(> 1.7) Returns a new negated version of the predicate function.",
 		"scope": "source.js"
 	},
 	"_noConflict": {
@@ -435,6 +483,12 @@
 		"prefix": "_partial",
 		"body": "_.partial(${1:functionName}, ${2:[*arguments]})",
 		"description": "Partially apply a function by filling in any number of its arguments, without changing its dynamic this value.",
+		"scope": "source.js"
+	},
+	"_partition": {
+		"prefix": "_partition",
+		"body": "_.partition(${1:list}, function(${2:value}) {\n  ${3:return …}\n})",
+		"description": "(Underscore.js > v1.6) Split list into two arrays: one whose elements all satisfy predicate and one whose elements all do not satisfy predicate. predicate is transformed through iteratee to facilitate shorthand syntaxes.",
 		"scope": "source.js"
 	},
 	"_pick": {
@@ -503,6 +557,12 @@
 		"description": "If the value of the named property is a function then invoke it with the object as context; otherwise, return it.",
 		"scope": "source.js"
 	},
+	"_sample": {
+		"prefix": "_sample",
+		"body": "_.sample(${1:list}, ${1:n});",
+		"description": "(Underscore.js) Produce a random sample from the list. Pass a number to return n random elements from the list. Otherwise a single random item will be returned.",
+		"scope": "source.js"
+	},
 	"_shuffle": {
 		"prefix": "_shuffle",
 		"body": "_.shuffle(${1:list})",
@@ -513,6 +573,12 @@
 		"prefix": "_size",
 		"body": "_.size(${1:list});",
 		"description": "(Underscore.js) Return the number of values in the list.",
+		"scope": "source.js"
+	},
+	"_some": {
+		"prefix": "_some",
+		"body": "_.some(${1:list}, function(${2:value}) {\n  ${3:// return …}\n});",
+		"description": "Returns true if any of the values in the list pass the predicate truth test. Short-circuits and stops traversing the list if a true element is found. predicate is transformed through iteratee to facilitate shorthand syntaxes.",
 		"scope": "source.js"
 	},
 	"_sortBy": {
