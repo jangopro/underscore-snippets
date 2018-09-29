@@ -74,7 +74,7 @@
 	"_contains": {
 		"prefix": "_contains",
 		"body": "_.contains(${1:list}, ${2:value}, ${3:fromIndex});",
-		"description": "(Underscore.js) Returns true if the value is present in the list. Uses indexOf internally, if list is an Array. ",
+		"description": "Returns true if the value is present in the list. Uses indexOf internally, if list is an Array. ",
 		"scope": "source.js"
 	},
 	"_countBy": {
@@ -122,7 +122,7 @@
 	"_each": {
 		"prefix": "_each",
 		"body": "_.each(${1:list}, function (${2:element}, ${3:index}) {\n    ${4:// }\n});",
-		"description": "(Underscore) Iterates over a list of elements, yielding each in turn to an iteratee function.",
+		"description": "Iterates over a list of elements, yielding each in turn to an iteratee function.",
 		"scope": "source.js"
 	},
 	"_escape": {
@@ -152,13 +152,13 @@
 	"_filter": {
 		"prefix": "_filter",
 		"body": "_.filter(${1:list}, function (${2:value}) {\n  ${3:// return …}\n}, ${4:context})",
-		"description": "(Underscore.js) Looks through each value in the list, returning an array of all the values that pass a truth test (predicate).",
+		"description": "Looks through each value in the list, returning an array of all the values that pass a truth test (predicate).",
 		"scope": "source.js"
 	},
 	"_find": {
 		"prefix": "_find",
 		"body": "_.find(${1:list}, function (${2:value}) {\n  ${3://   return …}\n});",
-		"description": "(Underscore.js) Looks through each value in the list, returning the first one that passes a truth test (predicate), or undefined if no value passes the test.",
+		"description": "Looks through each value in the list, returning the first one that passes a truth test (predicate), or undefined if no value passes the test.",
 		"scope": "source.js"
 	},
 	"_findIndex": {
@@ -182,7 +182,7 @@
 	"_findWhere": {
 		"prefix": "_findWhere",
 		"body": "_.findWhere(${1:list}, {${2:key}: ${3:value}});",
-		"description": "(Underscore.js) Looks through the list and returns the first value that matches all of the key-value pairs listed in properties.",
+		"description": "Looks through the list and returns the first value that matches all of the key-value pairs listed in properties.",
 		"scope": "source.js"
 	},
 	"_first": {
@@ -230,7 +230,7 @@
 	"_indexOf": {
 		"prefix": "_indexOf",
 		"body": "_.indexOf(${1:array}, ${2:value}${3:, [isSorted]})",
-		"description": "(Underscore.js) Returns the index at which value can be found in the array, or -1 if value is not present in the array. ",
+		"description": "Returns the index at which value can be found in the array, or -1 if value is not present in the array. ",
 		"scope": "source.js"
 	},
 	"_initial": {
@@ -392,7 +392,7 @@
 	"_map": {
 		"prefix": "_map",
 		"body": "_.map(${1:list}, function (${2:value}, ${3:key}, ${1:list}) {\n    ${4:// return …}\n}, ${5:context});",
-		"description": "(Underscore.js) Produces a new array of values by mapping each value in list through a transformation function (iterator).",
+		"description": "Produces a new array of values by mapping each value in list through a transformation function (iterator).",
 		"scope": "source.js"
 	},
 	"_mapObject": {
@@ -560,7 +560,7 @@
 	"_sample": {
 		"prefix": "_sample",
 		"body": "_.sample(${1:list}, ${1:n});",
-		"description": "(Underscore.js) Produce a random sample from the list. Pass a number to return n random elements from the list. Otherwise a single random item will be returned.",
+		"description": "Produce a random sample from the list. Pass a number to return n random elements from the list. Otherwise a single random item will be returned.",
 		"scope": "source.js"
 	},
 	"_shuffle": {
@@ -572,7 +572,7 @@
 	"_size": {
 		"prefix": "_size",
 		"body": "_.size(${1:list});",
-		"description": "(Underscore.js) Return the number of values in the list.",
+		"description": "Return the number of values in the list.",
 		"scope": "source.js"
 	},
 	"_some": {
