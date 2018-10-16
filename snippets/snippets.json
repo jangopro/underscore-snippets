@@ -14,7 +14,7 @@
 	"_allKeys": {
 		"prefix": "_allKeys",
 		"body": "_.allKeys(${1:object})",
-		"description": "Retrieve all the names of object's own and inherited properties.",
+		"description": "(>= 1.8) Retrieve all the names of object's own and inherited properties.",
 		"scope": "source.js"
 	},
 	"_any": {
@@ -26,7 +26,7 @@
 	"_before": {
 		"prefix": "_before",
 		"body": "_.before(${1:count}, ${2:functionName})",
-		"description": "Creates a version of the function that can be called no more than count times. The result of the last function call is memoized and returned when count has been reached.",
+		"description": "(>= 1.7) Creates a version of the function that can be called no more than count times. The result of the last function call is memoized and returned when count has been reached.",
 		"scope": "source.js"
 	},
 	"_bind": {
@@ -47,6 +47,12 @@
 		"description": "Returns a wrapped object. Calling methods on this object will continue to return wrapped objects until value is called.",
 		"scope": "source.js"
 	},
+	"_chunk": {
+		"prefix": "_chunk",
+		"body": "_.chunk(${1:array}, ${2:length})",
+		"description": "( >= 1.9) Chunks an array into multiple arrays, each containing length or fewer items.",
+		"scope": "source.js"
+	}, 
 	"_clone": {
 		"prefix": "_clone",
 		"body": "_.clone(${1:object})",
@@ -68,13 +74,13 @@
 	"_constant": {
 		"prefix": "_constant",
 		"body": "_.constant(${1:value})",
-		"description": "Creates a function that returns the same value that is used as the argument of",
+		"description": "(>= 1.6) Creates a function that returns the same value that is used as the argument of",
 		"scope": "source.js"
 	},
 	"_contains": {
 		"prefix": "_contains",
 		"body": "_.contains(${1:list}, ${2:value}, ${3:fromIndex});",
-		"description": "(Underscore.js) Returns true if the value is present in the list. Uses indexOf internally, if list is an Array. ",
+		"description": "Returns true if the value is present in the list. Uses indexOf internally, if list is an Array. ",
 		"scope": "source.js"
 	},
 	"_countBy": {
@@ -86,7 +92,7 @@
 	"_create": {
 		"prefix": "_create",
 		"body": "_.create(${1:Object}.prototype, {${2:props}})",
-		"description": "(> 1.8.3) Creates a new object with the given prototype, optionally attaching props as own properties. Basically, Object.create, but without all of the property descriptor jazz.",
+		"description": "(>= 1.8.3) Creates a new object with the given prototype, optionally attaching props as own properties. Basically, Object.create, but without all of the property descriptor jazz.",
 		"scope": "source.js"
 	},
 	"_debounce": {
@@ -122,7 +128,7 @@
 	"_each": {
 		"prefix": "_each",
 		"body": "_.each(${1:list}, function (${2:element}, ${3:index}) {\n    ${4:// }\n});",
-		"description": "(Underscore) Iterates over a list of elements, yielding each in turn to an iteratee function.",
+		"description": "Iterates over a list of elements, yielding each in turn to an iteratee function.",
 		"scope": "source.js"
 	},
 	"_escape": {
@@ -146,43 +152,43 @@
 	"_extendOwn": {
 		"prefix": "_extendOwn",
 		"body": "_.extendOwn(${1:destination}, ${2:*sources})",
-		"description": "Like extend, but only copies own properties over to the destination object.",
+		"description": "(>= 1.8) Like extend, but only copies own properties over to the destination object.",
 		"scope": "source.js"
 	},
 	"_filter": {
 		"prefix": "_filter",
 		"body": "_.filter(${1:list}, function (${2:value}) {\n  ${3:// return …}\n}, ${4:context})",
-		"description": "(Underscore.js) Looks through each value in the list, returning an array of all the values that pass a truth test (predicate).",
+		"description": "Looks through each value in the list, returning an array of all the values that pass a truth test (predicate).",
 		"scope": "source.js"
 	},
 	"_find": {
 		"prefix": "_find",
 		"body": "_.find(${1:list}, function (${2:value}) {\n  ${3://   return …}\n});",
-		"description": "(Underscore.js) Looks through each value in the list, returning the first one that passes a truth test (predicate), or undefined if no value passes the test.",
+		"description": "Looks through each value in the list, returning the first one that passes a truth test (predicate), or undefined if no value passes the test.",
 		"scope": "source.js"
 	},
 	"_findIndex": {
 		"prefix": "_findIndex",
 		"body": "_.findIndex(${1:array}, function (${2:value}) {\n  ${3:    return …}\n});",
-		"description": "(Underscore.js > 1.8) Similar to _.indexOf, returns the first index where the predicate truth test passes; otherwise returns -1.",
+		"description": "(>= 1.8) Similar to _.indexOf, returns the first index where the predicate truth test passes; otherwise returns -1.",
 		"scope": "source.js"
 	},
 	"_findLastIndex": {
 		"prefix": "_findLastIndex",
 		"body": "_.findLastIndex(${1:array}, function (${2:value}) {\n  ${3:    return …}\n});",
-		"description": "(Underscore.js > 1.8) Like _.findIndex but iterates the array in reverse, returning the index closest to the end where the predicate truth test passes.",
+		"description": "(>= 1.8) Like _.findIndex but iterates the array in reverse, returning the index closest to the end where the predicate truth test passes.",
 		"scope": "source.js"
 	},
 	"_findKey": {
 		"prefix": "_findKey",
 		"body": "_.findKey(${1:array}, function (${2:value}, ${3:key}) {\n  ${4:    return …}\n});",
-		"description": "(Underscore.js > 1.8) Similar to _.findIndex but for keys in objects. Returns the key where the predicate truth test passes or undefined. predicate is transformed through iteratee to facilitate shorthand syntaxes.",
+		"description": "Similar to _.findIndex but for keys in objects. Returns the key where the predicate truth test passes or undefined. predicate is transformed through iteratee to facilitate shorthand syntaxes.",
 		"scope": "source.js"
 	},
 	"_findWhere": {
 		"prefix": "_findWhere",
 		"body": "_.findWhere(${1:list}, {${2:key}: ${3:value}});",
-		"description": "(Underscore.js) Looks through the list and returns the first value that matches all of the key-value pairs listed in properties.",
+		"description": "Looks through the list and returns the first value that matches all of the key-value pairs listed in properties.",
 		"scope": "source.js"
 	},
 	"_first": {
@@ -224,13 +230,13 @@
 	"_indexBy": {
 		"prefix": "_indexBy",
 		"body": "_.indexBy(${1:list}, function (${2:value}) {\n  ${3:// return …}\n})",
-		"description": "(Underscore.js >1.5.2) Given a list, and an iteratee function that returns a key for each element in the list (or a property name), returns an object with an index of each item. Just like groupBy, but for when you know your keys are unique.",
+		"description": "(>= 1.5.2) Given a list, and an iteratee function that returns a key for each element in the list (or a property name), returns an object with an index of each item. Just like groupBy, but for when you know your keys are unique.",
 		"scope": "source.js"
 	},
 	"_indexOf": {
 		"prefix": "_indexOf",
 		"body": "_.indexOf(${1:array}, ${2:value}${3:, [isSorted]})",
-		"description": "(Underscore.js) Returns the index at which value can be found in the array, or -1 if value is not present in the array. ",
+		"description": "Returns the index at which value can be found in the array, or -1 if value is not present in the array. ",
 		"scope": "source.js"
 	},
 	"_initial": {
@@ -302,7 +308,7 @@
 	"_isError": {
 		"prefix": "_isError",
 		"body": "_.isError(${1:object})",
-		"description": "Returns true if object inherits from an Error.",
+		"description": "(>= 1.8) Returns true if object inherits from an Error.",
 		"scope": "source.js"
 	},
 	"_isFinite": {
@@ -317,10 +323,16 @@
 		"description": "Returns true if object is a Function.",
 		"scope": "source.js"
 	},
+	"_isMap": {
+		"prefix": "_isMap",
+		"body": "_.isMap(${1:object})",
+		"description": "Returns true if object is a Map.",
+		"scope": "source.js"
+	},
 	"_isMatch": {
 		"prefix": "_isMatch",
 		"body": "_.isMatch(${1:object}, {${2:properties}})",
-		"description": "Tells you if the keys and values in properties are contained in object.",
+		"description": "(>= 1.8) Tells you if the keys and values in properties are contained in object.",
 		"scope": "source.js"
 	},
 	"_isNaN": {
@@ -353,22 +365,47 @@
 		"description": "Returns true if object is a RegExp.",
 		"scope": "source.js"
 	},
+	"_isSet": {
+		"prefix": "_isSet",
+		"body": "_.isSet(${1:object})",
+		"description": "Returns true if object is a Set.",
+		"scope": "source.js"
+	},
 	"_isString": {
 		"prefix": "_isString",
 		"body": "_.isString(${1:object})",
 		"description": "Returns true if object is a String.",
 		"scope": "source.js"
 	},
+	"_isSymbol": {
+		"prefix": "_isSymbol",
+		"body": "_.isSymbol(${1:object})",
+		"description": "(>= 1.9) Returns true if object is a Symbol.",
+		"scope": "source.js"
+	},
+	
 	"_isUndefined": {
 		"prefix": "_isUndefined",
 		"body": "_.isUndefined(${1:value})",
 		"description": "Returns true if value is undefined.",
 		"scope": "source.js"
 	},
+	"_isWeakMap": {
+		"prefix": "_isWeakMap",
+		"body": "_.isWeakMap(${1:object})",
+		"description": "(>= 1.9) Returns true if object is a WeakMap.",
+		"scope": "source.js"
+	},
+	"_isWeakSet": {
+		"prefix": "_isWeakSet",
+		"body": "_.isWeakSet(${1:object})",
+		"description": "(>= 1.9) Returns true if object is a WeakSet.",
+		"scope": "source.js"
+	},
 	"_iteratee": {
 		"prefix": "_iteratee",
 		"body": "_.iteratee(${1:value})",
-		"description": "(> 1.7) Generates a callback that can be applied to each element in a collection. _.iteratee supports a number of shorthand syntaxes for common callback use cases.",
+		"description": "(>= 1.7) Generates a callback that can be applied to each element in a collection. _.iteratee supports a number of shorthand syntaxes for common callback use cases.",
 		"scope": "source.js"
 	},
 	"_keys": {
@@ -392,13 +429,13 @@
 	"_map": {
 		"prefix": "_map",
 		"body": "_.map(${1:list}, function (${2:value}, ${3:key}, ${1:list}) {\n    ${4:// return …}\n}, ${5:context});",
-		"description": "(Underscore.js) Produces a new array of values by mapping each value in list through a transformation function (iterator).",
+		"description": "Produces a new array of values by mapping each value in list through a transformation function (iterator).",
 		"scope": "source.js"
 	},
 	"_mapObject": {
 		"prefix": "_mapObject",
 		"body": "_.mapObject(${1:object}, function (${2:value}, ${3:key}) {\n  ${4:    return }\n})",
-		"description": "(> 1.8) Like map, but for objects. Transform the value of each property in turn.",
+		"description": "(>= 1.8) Like map, but for objects. Transform the value of each property in turn.",
 		"scope": "source.js"
 	},
 	"_matcher": {
@@ -434,7 +471,7 @@
 	"_negate": {
 		"prefix": "_negate",
 		"body": "_.negate(${1:functionName})",
-		"description": "(> 1.7) Returns a new negated version of the predicate function.",
+		"description": "(>= 1.7) Returns a new negated version of the predicate function.",
 		"scope": "source.js"
 	},
 	"_noConflict": {
@@ -446,13 +483,13 @@
 	"_noop": {
 		"prefix": "_noop",
 		"body": "_.noop()",
-		"description": "Returns undefined irrespective of the arguments passed to it. Useful as the default for optional callback arguments.",
+		"description": "(>= 1.7) Returns undefined irrespective of the arguments passed to it. Useful as the default for optional callback arguments.",
 		"scope": "source.js"
 	},
 	"_now": {
 		"prefix": "_now",
 		"body": "_.now()",
-		"description": "Returns an integer timestamp for the current time, using the fastest method available in the runtime. Useful for implementing timing/animation functions.",
+		"description": "(>= 1.6) Returns an integer timestamp for the current time, using the fastest method available in the runtime. Useful for implementing timing/animation functions.",
 		"scope": "source.js"
 	},
 	"_object": {
@@ -488,7 +525,7 @@
 	"_partition": {
 		"prefix": "_partition",
 		"body": "_.partition(${1:list}, function(${2:value}) {\n  ${3:return …}\n})",
-		"description": "(Underscore.js > v1.6) Split list into two arrays: one whose elements all satisfy predicate and one whose elements all do not satisfy predicate. predicate is transformed through iteratee to facilitate shorthand syntaxes.",
+		"description": "(>= 1.6) Split list into two arrays: one whose elements all satisfy predicate and one whose elements all do not satisfy predicate. predicate is transformed through iteratee to facilitate shorthand syntaxes.",
 		"scope": "source.js"
 	},
 	"_pick": {
@@ -506,13 +543,13 @@
 	"_property": {
 		"prefix": "_property",
 		"body": "_.property(${1:path})",
-		"description": "Returns a function that will return the specified property of any passed-in object. path may be specified as a simple key, or as an array of object keys or array indexes, for deep property fetching.",
+		"description": "(>= 1.6) Returns a function that will return the specified property of any passed-in object. path may be specified as a simple key, or as an array of object keys or array indexes, for deep property fetching.",
 		"scope": "source.js"
 	},
 	"_propertyOf": {
 		"prefix": "_propertyOf",
 		"body": "_.propertyOf(${1:object})",
-		"description": "Inverse of _.property. Takes an object and returns a function which will return the value of a provided property.",
+		"description": "(>= 1.8) Inverse of _.property. Takes an object and returns a function which will return the value of a provided property.",
 		"scope": "source.js"
 	},
 	"_random": {
@@ -530,7 +567,7 @@
 	"_reduce": {
 		"prefix": "_reduce",
 		"body": "_.reduce(${1:list}, function (${2:memo}, ${3:value}, ${4:key}, ${1:list} ) {\n  ${6:// return …}\n}, ${5:memo} )",
-		"description": "Also known as inject and foldl, reduce boils down a list of values into a single value.",
+		"description": "Also known as inject and fold, reduce boils down a list of values into a single value.",
 		"scope": "source.js"
 	},
 	"_reduceRight": {
@@ -551,6 +588,12 @@
 		"description": "Returns the rest of the elements in an array. Pass an index to return the values of the array from that index onward.",
 		"scope": "source.js"
 	},
+	"_restArguments": {
+		"prefix": "_restArguments",
+		"body": "_.restArguments(function(${1:args}) {\n  ${2://}\n}, ${2:[startIndex]})",
+		"description": "Returns a version of the function that, when called, receives all arguments from and beyond startIndex collected into a single array. If you don’t pass an explicit startIndex, it will be determined by looking at the number of arguments to the function itself. Similar to ES6’s rest parameters syntax.",
+		"scope": "source.js"
+	},
 	"_result": {
 		"prefix": "_result",
 		"body": "_.result(${1:object}, ${2:property})",
@@ -560,7 +603,7 @@
 	"_sample": {
 		"prefix": "_sample",
 		"body": "_.sample(${1:list}, ${1:n});",
-		"description": "(Underscore.js) Produce a random sample from the list. Pass a number to return n random elements from the list. Otherwise a single random item will be returned.",
+		"description": "(>= 1.5.2) Produce a random sample from the list. Pass a number to return n random elements from the list. Otherwise a single random item will be returned.",
 		"scope": "source.js"
 	},
 	"_shuffle": {
@@ -572,7 +615,7 @@
 	"_size": {
 		"prefix": "_size",
 		"body": "_.size(${1:list});",
-		"description": "(Underscore.js) Return the number of values in the list.",
+		"description": "Return the number of values in the list.",
 		"scope": "source.js"
 	},
 	"_some": {
