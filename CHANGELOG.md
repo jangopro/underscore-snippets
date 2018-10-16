@@ -1,5 +1,4 @@
 # Change Log
-All notable changes to the "underscore-snippets" extension will be documented in this file.
 
 ## 1.3.0
 - Added: chunk, isMap, isSet, isSymbol, isWeakMap, isWeakSet, restArguments snippets
