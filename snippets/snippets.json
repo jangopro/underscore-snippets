@@ -47,6 +47,12 @@
 		"description": "Returns a wrapped object. Calling methods on this object will continue to return wrapped objects until value is called.",
 		"scope": "source.js"
 	},
+	"_chunk": {
+		"prefix": "_chunk",
+		"body": "_.chunk(${1:array}, ${2:length})",
+		"description": "( >= 1.9) Chunks an array into multiple arrays, each containing length or fewer items.",
+		"scope": "source.js"
+	}, 
 	"_clone": {
 		"prefix": "_clone",
 		"body": "_.clone(${1:object})",
@@ -317,6 +323,12 @@
 		"description": "Returns true if object is a Function.",
 		"scope": "source.js"
 	},
+	"_isMap": {
+		"prefix": "_isMap",
+		"body": "_.isMap(${1:object})",
+		"description": "Returns true if object is a Map.",
+		"scope": "source.js"
+	},
 	"_isMatch": {
 		"prefix": "_isMatch",
 		"body": "_.isMatch(${1:object}, {${2:properties}})",
@@ -353,16 +365,41 @@
 		"description": "Returns true if object is a RegExp.",
 		"scope": "source.js"
 	},
+	"_isSet": {
+		"prefix": "_isSet",
+		"body": "_.isSet(${1:object})",
+		"description": "Returns true if object is a Set.",
+		"scope": "source.js"
+	},
 	"_isString": {
 		"prefix": "_isString",
 		"body": "_.isString(${1:object})",
 		"description": "Returns true if object is a String.",
 		"scope": "source.js"
 	},
+	"_isSymbol": {
+		"prefix": "_isSymbol",
+		"body": "_.isSymbol(${1:object})",
+		"description": "(>= 1.9) Returns true if object is a Symbol.",
+		"scope": "source.js"
+	},
+	
 	"_isUndefined": {
 		"prefix": "_isUndefined",
 		"body": "_.isUndefined(${1:value})",
 		"description": "Returns true if value is undefined.",
+		"scope": "source.js"
+	},
+	"_isWeakMap": {
+		"prefix": "_isWeakMap",
+		"body": "_.isWeakMap(${1:object})",
+		"description": "(>= 1.9) Returns true if object is a WeakMap.",
+		"scope": "source.js"
+	},
+	"_isWeakSet": {
+		"prefix": "_isWeakSet",
+		"body": "_.isWeakSet(${1:object})",
+		"description": "(>= 1.9) Returns true if object is a WeakSet.",
 		"scope": "source.js"
 	},
 	"_iteratee": {
@@ -530,7 +567,7 @@
 	"_reduce": {
 		"prefix": "_reduce",
 		"body": "_.reduce(${1:list}, function (${2:memo}, ${3:value}, ${4:key}, ${1:list} ) {\n  ${6:// return …}\n}, ${5:memo} )",
-		"description": "Also known as inject and foldl, reduce boils down a list of values into a single value.",
+		"description": "Also known as inject and fold, reduce boils down a list of values into a single value.",
 		"scope": "source.js"
 	},
 	"_reduceRight": {
@@ -549,6 +586,12 @@
 		"prefix": "_rest",
 		"body": "_.rest(${1:array}, ${2:[index]})",
 		"description": "Returns the rest of the elements in an array. Pass an index to return the values of the array from that index onward.",
+		"scope": "source.js"
+	},
+	"_restArguments": {
+		"prefix": "_restArguments",
+		"body": "_.restArguments(function(${1:args}) {\n  ${2://}\n}, ${2:[startIndex]})",
+		"description": "Returns a version of the function that, when called, receives all arguments from and beyond startIndex collected into a single array. If you don’t pass an explicit startIndex, it will be determined by looking at the number of arguments to the function itself. Similar to ES6’s rest parameters syntax.",
 		"scope": "source.js"
 	},
 	"_result": {
