@@ -2,7 +2,7 @@
     "name": "underscore-snippets",
     "displayName": "UnderscoreJS Snippets",
     "description": "Underscore.js Snippets for VS Code",
-    "version": "1.1.0",
+    "version": "1.3.1",
     "publisher": "jangopro",
     "icon": "icons/icon-underscore-snippets.png",
     "engines": {
