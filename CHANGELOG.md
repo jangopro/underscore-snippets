@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to the "underscore-snippets" extension will be documented in this file.
 
+## 1.3.0
+- Added: chunk, isMap, isSet, isSymbol, isWeakMap, isWeakSet, restArguments snippets
+- Added minimum UnderscoreJS version required for the most recent functions
+
 ## 1.2.0
 - Added: create, sample, some, findIndex, findLastIndex, indexBy, iteratee, mapObject, partition snippets
 - Added missing argument to _.every snippet
